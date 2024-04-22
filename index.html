@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Talentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Banco de Talentos</h1>
+    </header>
+    <div class="filter-section">
+        <h2>Filtrar por Categoria</h2>
+        <button onclick="filterCandidates('All')">All</button>
+        <button onclick="filterCandidates('Sales')">Sales</button>
+        <button onclick="filterCandidates('ADM')">ADM</button>
+        <button onclick="filterCandidates('Social Media')">Social Media</button>
+        <!-- Adicione mais botões conforme necessário -->
+    </div>
+    <div id="candidates-list">
+        <!-- Lista de candidatos será exibida aqui -->
+    </div>
+
+    <div id="candidate-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="candidate-name"></h2>
+            <p id="candidate-summary"></p>
+            <div id="candidate-video"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
