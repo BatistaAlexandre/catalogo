@@ -11,9 +11,56 @@ header {
     text-align: center;
 }
 
+main {
+    display: flex;
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidebar-header {
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.sidebar-content {
+    padding: 10px 10px 10px 16px;
+    color: white;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #555;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
 .filter-section {
     text-align: center;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .filter-section button {

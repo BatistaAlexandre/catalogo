@@ -10,24 +10,38 @@
     <header>
         <h1>Banco de Talentos</h1>
     </header>
-    <div class="filter-section">
-        <h2>Filtrar por Categoria</h2>
-        <button onclick="filterCandidates('All')">All</button>
-        <button onclick="filterCandidates('Sales')">Sales</button>
-        <button onclick="filterCandidates('ADM')">ADM</button>
-        <button onclick="filterCandidates('Social Media')">Social Media</button>
-        <!-- Adicione mais botões conforme necessário -->
-    </div>
-    <div id="candidates-list">
-        <!-- Lista de candidatos será exibida aqui -->
-    </div>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Menu</h2>
+        </div>
+        <div class="sidebar-content">
+            <button onclick="showRejectedCandidates()">Disliked</button>
+            <button onclick="showInterviewCandidates()">Liked</button>
+        </div>
+    </aside>
 
-    <div id="candidate-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="candidate-name"></h2>
-            <p id="candidate-summary"></p>
-            <div id="candidate-video"></div>
+    <div class="main-content">
+        <div class="filter-section">
+            <h2>Filtrar por Categoria</h2>
+            <button onclick="filterCandidates('All')">All</button>
+            <button onclick="filterCandidates('Sales')">Sales</button>
+            <button onclick="filterCandidates('ADM')">ADM</button>
+            <button onclick="filterCandidates('Social Media')">Social Media</button>
+            <!-- Adicione mais botões conforme necessário -->
+        </div>
+        <div id="candidates-list">
+            <!-- Lista de candidatos será exibida aqui -->
+        </div>
+
+        <div id="candidate-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="candidate-name"></h2>
+                <p id="candidate-summary"></p>
+                <div id="candidate-video"></div>
+                <button id="like-btn" onclick="likeCandidate()">Like</button>
+                <button id="dislike-btn" onclick="dislikeCandidate()">Dislike</button>
+            </div>
         </div>
     </div>
 
